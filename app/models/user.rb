@@ -1,13 +1,11 @@
 class User < ApplicationRecord
-=begin
-  def initialize(email, password, firstname, lastname)
-    @email = email
-    @password = password
-    @firstname = firstname
-    @lastname = lastname
+  attr_accessor :email, :password, :firstname, :lastname
+
+  def initialize(attributes = {})
+    @email = attributes[:email]
+    @password = attributes[:password]
+    @firstname = attributes[:firstname]
+    @lastname = attributes[:lastname]
   end
-=end 
-  # def create(email, password, firstname, lastname)
-  #   user = User.new
-  # end
+
 end
