@@ -1,5 +1,31 @@
 <% @posts.each do |post| %>
   <p><%= post.message %></p>
+  <p>Comments</p>
+  <% post.comments.each do |comment| %>
+    <p>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>  
+    </p>
+  <% end %>
+  <p>Add a comment</p>
+  <%= form_with model: [ post, post.comments.build ] do |form| %>
+    <p>
+      <%= form.label :commenter %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
 <% end %>
 
 <%= link_to new_post_path do %>
