@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   def new
     @post = Post.new
@@ -9,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = posts_ordered_by_descending_date
   end
 
   def like
@@ -24,5 +26,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:message)
+  end
+
+  def posts_ordered_by_descending_date
+    Post.order(created_at: :desc)
   end
 end
