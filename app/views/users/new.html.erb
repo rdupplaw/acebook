@@ -1,0 +1,21 @@
+<% provide(:title, 'Sign up') %>
+
+<h1>Sign up</h1>
+<p>This will be a signup page for new users.</p>
+
+<%= form_for :user, class: "signupForm" do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :firstname, class: "shortInput" %> <br />
+
+  <%= f.label :last_name %>
+  <%= f.text_field :lastname, class: "shortInput" %> <br />
+
+  <%= f.label :email, "Email Address" %>
+  <%= f.text_field :email, class: "shortInput" %> <br />
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "shortInput" %> <br />
+
+
+  <%= f.submit "Create account", class: "button createAccount" %>
+<% end %>
