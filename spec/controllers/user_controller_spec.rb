@@ -1,3 +1,4 @@
+=begin
 require 'rails_helper'
 
 RSpec.describe User, type: :controller do
@@ -8,3 +9,4 @@ RSpec.describe User, type: :controller do
     assert_response :successs
   end
 end
+=end 
