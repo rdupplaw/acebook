@@ -41,6 +41,7 @@ group :development, :test do
   gem "rspec_junit_formatter", "~> 0.4.1"
   gem 'selenium-webdriver'
   gem "orderly", "~> 0.1.1"
+  gem 'simplecov', require: false
 end
 
 group :development do
