@@ -72,4 +72,13 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  context 'when given a duplicate email address' do
+    it 'is invalid' do
+      user_duplicate = @user.dup
+      user_duplicate.email = @user.email.upcase
+      @user.save
+      expect(user_duplicate).not_to be_valid
+    end
+  end
 end
