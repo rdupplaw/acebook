@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     @posts = posts_ordered_by_descending_date
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+  
   def like
     post = Post.find(params[:id])
     post.likes += 1

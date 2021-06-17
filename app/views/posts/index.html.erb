@@ -1,9 +1,11 @@
 <% @posts.each do |post| %>
   <p><%= post.message %></p>
+
   <p><%= post.likes %> likes </p>
   <a href="/posts/<%= post.id %>/like">Like</p>
+
+  <p><%= post.comments.length %> comments</p>
+  <%= link_to "View", post_path(post) %><br>
 <% end %>
 
-<%= link_to new_post_path do %>
-  New post
-<% end %>
+<%= link_to "New post", new_post_path %>
