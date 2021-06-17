@@ -9,6 +9,8 @@ feature 'Sign up' do
     fill_in "user_password", with: "test123"
     fill_in "user_password_confirmation", with: "test123"
     click_button "Create account"
-    expect(page).to have_content("John", "Doe", "john@example.com")
+    expect(page).to have_content("John")
+    expect(page).to have_content("Doe")
+    expect(page).to have_content("john@example.com")
   end
 end
