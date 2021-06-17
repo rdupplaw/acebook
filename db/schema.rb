@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 2021_06_15_135354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
-  end
 
   create_table "posts", force: :cascade do |t|
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes", default: 0
   end
 
   add_foreign_key "comments", "posts"
