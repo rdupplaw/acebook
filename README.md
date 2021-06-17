@@ -19,9 +19,11 @@ First, clone this repository. Then:
 
 ## Instructions for starting up a new ticket
 
+```bash
 > pull the last version of Acebook in the MAIN branch from Git hub
 > run $rails db:migrate to ensure producing a fresh verion of schema.rb in your machine
 > create a new branch to work with $git branch -b thisIsMyNewTicket
+```
 
 ## Troubleshooting
 
