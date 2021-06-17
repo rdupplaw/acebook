@@ -98,4 +98,11 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
   end
+
+  context 'when given a password less than 6 characters' do
+    it 'is invalid' do
+      @user.password = @user.password_confirmation = 'a' * 5
+      expect(@user).not_to be_valid
+    end
+  end
 end
