@@ -53,6 +53,23 @@ RSpec.describe User, type: :model do
     end
   end
 
-  
+  context 'when given a valid email address' do
+    it 'is valid' do
+      valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
+      valid_addresses.each do |address|
+        @user.email = address
+        expect(@user).to be_valid, "#{address.inspect} should be valid"
+      end
+    end
+  end
 
+  context 'when given an invalid email address' do
+    it 'is invalid' do
+      invalid_addresses = %w[user@example,com user_at_foo.org user.name@example. foo@bar_baz.com foo@bar+baz.com foo@bar..com]
+      invalid_addresses.each do |address|
+        @user.email = address
+        expect(@user).not_to be_valid, "#{address.inspect} should be invalid"
+      end
+    end
+  end
 end
