@@ -11,6 +11,12 @@ RSpec.describe Comment, type: :model do
     comment = @post.comments.create
     expect(comment).not_to be_valid
   end
+
+  it "can leave a comment" do
+    comment = @post.comments.create(body: "hello")
+    expect(comment).to be_valid
+  end
+  
   it "cannot leave a comment longer than 250 chars" do
     string = ""
     251.times {string << "a"}
