@@ -31,4 +31,28 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
   end
+
+  context 'when given a first name greater than 50 chars' do
+    it 'it is invalid' do
+      @user.firstname = "a" * 51
+      expect(@user).not_to be_valid
+    end
+  end
+
+  context 'when given a last name greater than 50 chars' do
+    it 'it is invalid' do
+      @user.lastname = "a" * 51
+      expect(@user).not_to be_valid
+    end
+  end
+
+  context 'when given a email greater than 255 chars' do
+    it 'it is invalid' do
+      @user.email = "a" * 244 + "@example.com"
+      expect(@user).not_to be_valid
+    end
+  end
+
+  
+
 end
