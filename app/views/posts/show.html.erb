@@ -1,0 +1,10 @@
+<h1><%= @post.message %></h1>
+
+<p>Comments</p>
+<p>
+  <%= @post.comments.length %> comments
+</p>
+<%= render @post.comments %>
+
+<p>Add a comment</p>
+<%= render 'comments/form' %>

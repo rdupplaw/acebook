@@ -1,8 +1,12 @@
-Rails.application.routes.draw do
-#  get 'user/new'
- # get "/sign_up", to: "user#new"
-  
- resources :posts, :users
+# frozen_string_literal: true
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+Rails.application.routes.draw do
+ 
+ resources :users
+  
+ resources :posts do
+    resources :comments
+    get '/like' , on: :member, to: 'posts#like'
+ end
+
 end
