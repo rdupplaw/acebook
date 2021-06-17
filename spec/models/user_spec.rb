@@ -17,4 +17,11 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
   end
+
+  context 'when not given a lastname' do
+    it 'is invalid' do
+      @user.lastname = ''
+      expect(@user).not_to be_valid
+    end
+  end
 end
