@@ -4,6 +4,8 @@
 <p>This will be a signup page for new users.</p>
 
 <%= form_for @user, class: "signupForm" do |f| %>
+  <%= render 'shared/error_messages' %>
+  
   <%= f.label :first_name %>
   <%= f.text_field :firstname, class: "shortInput" %> <br />
 
