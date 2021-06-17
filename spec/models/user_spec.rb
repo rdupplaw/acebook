@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before(:each) do
-    @user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com')
+  before do
+    @user = described_class.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
+                                password: 'foobar', password_confirmation: 'foobar')
   end
 
   context 'when given all required attributes' do
@@ -33,22 +36,22 @@ RSpec.describe User, type: :model do
   end
 
   context 'when given a first name greater than 50 chars' do
-    it 'it is invalid' do
-      @user.firstname = "a" * 51
+    it 'is invalid' do
+      @user.firstname = 'a' * 51
       expect(@user).not_to be_valid
     end
   end
 
   context 'when given a last name greater than 50 chars' do
-    it 'it is invalid' do
-      @user.lastname = "a" * 51
+    it 'is invalid' do
+      @user.lastname = 'a' * 51
       expect(@user).not_to be_valid
     end
   end
 
   context 'when given a email greater than 255 chars' do
-    it 'it is invalid' do
-      @user.email = "a" * 244 + "@example.com"
+    it 'is invalid' do
+      @user.email = "#{'a' * 244}@example.com"
       expect(@user).not_to be_valid
     end
   end
@@ -65,7 +68,8 @@ RSpec.describe User, type: :model do
 
   context 'when given an invalid email address' do
     it 'is invalid' do
-      invalid_addresses = %w[user@example,com user_at_foo.org user.name@example. foo@bar_baz.com foo@bar+baz.com foo@bar..com]
+      invalid_addresses = %w[user@example,com user_at_foo.org user.name@example. foo@bar_baz.com foo@bar+baz.com
+                             foo@bar..com]
       invalid_addresses.each do |address|
         @user.email = address
         expect(@user).not_to be_valid, "#{address.inspect} should be invalid"
@@ -81,8 +85,8 @@ RSpec.describe User, type: :model do
     end
   end
 
-  it "email addresses should be saved as lower-case" do 
-    mixed_case_email = "Foo@ExAMPle.CoM"
+  it 'email addresses should be saved as lower-case' do
+    mixed_case_email = 'Foo@ExAMPle.CoM'
     @user.email = mixed_case_email
     @user.save
     expect(mixed_case_email.downcase).to eq(@user.reload.email)
