@@ -14,6 +14,14 @@ class PostsController < ApplicationController
     @posts = posts_ordered_by_descending_date
   end
 
+  def like
+    post = Post.find(params[:id])
+    post.likes += 1
+    post.save!
+
+    redirect_to posts_url
+  end
+
   private
 
   def post_params
