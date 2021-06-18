@@ -4,7 +4,20 @@
 
 https://aqueous-harbor-18057.herokuapp.com/posts
 
-## Quickstart
+
+## About the Project 
+
+This project is a web application that clones the main features of Facebook, users can create an account, and post messages and photos, as well as posting comments on other posts.
+
+This project was built in weeks 8/9 of the Makers Academy course in a team of 8, using AGILE development process with sprints lasting 2 days.
+
+### Built with
+
+The main technologies used in this project are as follows:
+
+* Ruby on Rails
+
+## Getting started
 
 First, clone this repository. Then:
 
