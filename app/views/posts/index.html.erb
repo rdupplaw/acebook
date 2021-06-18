@@ -1,6 +1,10 @@
 <% @posts.each do |post| %>
   <p><%= post.message %></p>
 
+  <% if post.image.attached? %>
+    <%= image_tag post.image %>
+  <% end %>
+
   <p><%= post.likes %> likes </p>
   <a href="/posts/<%= post.id %>/like">Like</a>
 
