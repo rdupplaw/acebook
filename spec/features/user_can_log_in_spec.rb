@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Comments", type: :feature do
-  before(:all) do
+  before do
     user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
       password: 'foobar', password_confirmation: 'foobar')
     user.save
@@ -34,6 +34,12 @@ RSpec.feature "Comments", type: :feature do
     expect(page).to have_content('Invalid email/password combination')
   end
 
-  scenario 'when the user enters correct email address and password' do
+  scenario 'login succeeds when the user enters correct email address and password' do
+    visit login_path
+    fill_in 'session[email]', with: 'user@example.com'
+    fill_in 'session[password]', with: 'foobar'
+    click_button 'Log in'
+    expect(current_path).to eq('/users/1')
+    expect(page).not_to have_content('Invalid email/password combination')
   end
 end
