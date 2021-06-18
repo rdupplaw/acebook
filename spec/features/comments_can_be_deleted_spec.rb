@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature "Comments", type: :feature do
+  before do
+    register_and_login
+  end
+
   scenario "Can be deleted" do
-    visit "/posts"
     click_link "New post"
     fill_in "Message", with: "Hello, world!"
     click_button "Submit"

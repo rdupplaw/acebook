@@ -3,8 +3,11 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
 
   before(:each) do
-    @post = Post.new(id: 1, message: 'test', created_at: DateTime.now, updated_at: DateTime.now)
-    @post.save
+    user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
+      password: 'foobar', password_confirmation: 'foobar')
+    user.save
+
+    @post = user.posts.create(id: 1, message: 'test', created_at: DateTime.now, updated_at: DateTime.now)
   end
 
   it "cannot leave an empty comment" do

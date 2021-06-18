@@ -3,6 +3,13 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
+  before(:each) do
+    user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
+      password: 'foobar', password_confirmation: 'foobar')
+    user.save
+    session[:user_id] = user.id
+  end
+
   describe 'GET /new ' do
     it 'responds with 200' do
       get :new
