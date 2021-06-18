@@ -7,7 +7,7 @@ RSpec.feature "Comments", type: :feature do
     user.save
   end
 
-  scenario 'when the user enters an incorrect email address' do
+  scenario 'login fails when the user enters an incorrect email address' do
     visit login_path
     fill_in 'session[email]', with: 'use@example.com'
     fill_in 'session[password]', with: 'foobar'
@@ -16,10 +16,22 @@ RSpec.feature "Comments", type: :feature do
     expect(page).to have_content('Invalid email/password combination')
   end
 
-  scenario 'when the user enters an incorrect password' do
+  scenario 'login fails when the user enters an incorrect password' do
+    visit login_path
+    fill_in 'session[email]', with: 'user@example.com'
+    fill_in 'session[password]', with: 'foobarr'
+    click_button 'Log in'
+    expect(current_path).to eq('/login')
+    expect(page).to have_content('Invalid email/password combination')
   end
 
-  scenario 'when the user enters an incorrect email address and password' do
+  scenario 'login fails when the user enters an incorrect email address and password' do
+    visit login_path
+    fill_in 'session[email]', with: 'use@example.com'
+    fill_in 'session[password]', with: 'foobarr'
+    click_button 'Log in'
+    expect(current_path).to eq('/login')
+    expect(page).to have_content('Invalid email/password combination')
   end
 
   scenario 'when the user enters correct email address and password' do
