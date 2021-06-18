@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Comments", type: :feature do
+RSpec.feature "Log in", type: :feature do
   before do
     user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
       password: 'foobar', password_confirmation: 'foobar')
