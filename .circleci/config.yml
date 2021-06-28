@@ -87,7 +87,7 @@ workflows:
             branches:
               only: main
           post-steps:
-            - run: bin/rails db:migrate
+            - run: heroku run rake db:migrate --app $HEROKU_APP_NAME
 
   
 
