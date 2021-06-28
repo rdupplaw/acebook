@@ -7,6 +7,8 @@
     <% @posts.each do |post| %>
       <table class="content">
         <tbody>
+          <tr><strong><%= " Posted by: #{User.find(post.user_id).firstname} #{User.find(post.user_id).lastname}" %></strong>
+          </tr>
           <tr>
           <p><div class="post"><%= post.message %></div></p>
           </tr>

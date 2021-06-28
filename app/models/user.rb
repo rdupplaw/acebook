@@ -10,5 +10,6 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   has_secure_password
 
+  has_one_attached :profile_picture
   has_many :posts
 end
