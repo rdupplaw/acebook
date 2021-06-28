@@ -6,6 +6,9 @@
 <%= form_for @user, class: "signupForm" do |f| %>
   <%= render 'shared/error_messages' %>
   
+  <%= f.label :profile_picture %>
+  <%= f.file_field :profile_picture %> <br />
+  
   <%= f.label :first_name %>
   <%= f.text_field :firstname, class: "shortInput" %> <br />
 

@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe 'Timeline', type: :feature do
@@ -10,8 +9,7 @@ RSpec.describe 'Timeline', type: :feature do
     click_link 'New post'
     fill_in 'Message', with: 'Hello, world!'
     click_button 'Submit'
-    expect(page).to have_content('Hello, world!')
-    expect(page).to have_content('John Doe')
+    expect(page).to have_css("img[src*='profile_pic.jpeg']")
   end
 
 end

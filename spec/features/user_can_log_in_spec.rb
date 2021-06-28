@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Log in", type: :feature do
   before do
-    user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
-      password: 'foobar', password_confirmation: 'foobar')
-    user.save
+    register
   end
 
   scenario 'login fails when the user enters an incorrect email address' do
@@ -36,8 +34,8 @@ RSpec.feature "Log in", type: :feature do
 
   scenario 'login succeeds when the user enters correct email address and password' do
     visit login_path
-    fill_in 'session[email]', with: 'user@example.com'
-    fill_in 'session[password]', with: 'foobar'
+    fill_in 'session[email]', with: 'john@example.com'
+    fill_in 'session[password]', with: 'test123'
     click_button 'Log in'
     expect(current_path).to eq('/users/1')
     expect(page).not_to have_content('Invalid email/password combination')
