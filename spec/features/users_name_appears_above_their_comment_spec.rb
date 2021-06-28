@@ -11,6 +11,6 @@ RSpec.feature 'Comments and Users' do
 
     fill_in "comment[body]", with: "goodbye"
     click_button "Create Comment"
-    expect(page).to have_content("TestUser")
+    expect(page).to have_content("John")
   end
 end
