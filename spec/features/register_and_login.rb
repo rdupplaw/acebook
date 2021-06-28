@@ -1,5 +1,5 @@
 def register_and_login
-  user = User.new(firstname: 'Example', lastname: 'User', email: 'user@example.com',
+  user = User.new(firstname: 'TestUser', lastname: 'User', email: 'user@example.com',
     password: 'foobar', password_confirmation: 'foobar')
   user.save
 
