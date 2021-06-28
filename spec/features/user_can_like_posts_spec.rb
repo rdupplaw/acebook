@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature "Timeline", type: :feature do
+  before do
+    register_and_login
+  end
 
   scenario "Can view zero likes for a post" do
-    visit "/posts"
     click_link "New post"
     fill_in "Message", with: "Hello, world!"
     click_button "Submit"
@@ -11,7 +13,6 @@ RSpec.feature "Timeline", type: :feature do
   end
 
   scenario "Can click on likes and increase number of likes" do
-    visit "/posts"
     click_link "New post"
     fill_in "Message", with: "Hello, world!"
     click_button "Submit"

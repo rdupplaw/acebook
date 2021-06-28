@@ -6,12 +6,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @user = current_user
+    @post = @user.posts.create(post_params)
     redirect_to posts_url
   end
 
   def index
     @posts = posts_ordered_by_descending_date
+    @user = current_user if logged_in?
   end
 
   def show
@@ -22,7 +24,6 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.likes += 1
     post.save!
-
     redirect_to posts_url
   end
 
