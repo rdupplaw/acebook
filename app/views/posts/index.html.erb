@@ -11,6 +11,11 @@
           <p><div class="post"><%= post.message %></div></p>
           </tr>
           <tr>
+            <% if post.image.attached? %>
+              <%= image_tag post.image %>
+            <% end %>
+          </tr>
+          <tr>
             <td><a href="/posts/<%= post.id %>/like">Like</a></td>
             <td><%= link_to "View", post_path(post) %><br></td>
           </tr>
