@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Timeline', type: :feature do
@@ -13,5 +14,4 @@ RSpec.describe 'Timeline', type: :feature do
     expect(page).to have_content('Hello, world!')
     expect(page).to have_content('John Doe')
   end
-
 end
