@@ -82,10 +82,12 @@ workflows:
       - build
       - heroku/deploy-via-git:
           requires:
-            - build
+            - test
           filters:
             branches:
               only: main
+          post-steps:
+            - run: bin/rails db:migrate
 
   
 
