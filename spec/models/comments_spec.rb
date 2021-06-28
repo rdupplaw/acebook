@@ -22,7 +22,7 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'cannot leave a comment longer than 250 chars' do
-    string = ''
+    string = ''.dup
     251.times { string << 'a' }
     comment = @post.comments.create(body: string)
     expect(comment).not_to be_valid
