@@ -8,7 +8,7 @@
       <table class="content">
         <tbody>
           <tr>
-            <%= image_tag @user.profile_picture, class: "profile-pic" %>
+            <%= image_tag User.find(post.user_id).profile_picture, class: "profile-pic" %>
             <strong><%= "#{User.find(post.user_id).firstname} #{User.find(post.user_id).lastname}" %></strong>
           </tr>
           <tr>
