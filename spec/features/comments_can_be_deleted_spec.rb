@@ -16,8 +16,6 @@ RSpec.describe 'Comments', type: :feature do
     fill_in 'comment[body]', with: 'goodbye'
     click_button 'Create Comment'
 
-    click_link 'Delete'
-
 
     click_link "View"
     click_link "Delete"
