@@ -37,7 +37,7 @@ RSpec.feature "Log in", type: :feature do
     fill_in 'session[email]', with: 'john@example.com'
     fill_in 'session[password]', with: 'test123'
     click_button 'Log in'
-    expect(current_path).to eq('/users/1')
+    expect(current_path).to eq('/posts')
     expect(page).not_to have_content('Invalid email/password combination')
   end
 end
