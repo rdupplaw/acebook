@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
   
   def new
+    require_login
   end
 
 
@@ -21,4 +22,14 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_url
   end
+
+  private
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+    end
+  end
+
+
 end
