@@ -13,13 +13,8 @@ RSpec.describe 'Comments', type: :feature do
     click_button 'Submit'
     click_link 'View'
 
-    fill_in 'comment[commenter]', with: 'CharlieS'
     fill_in 'comment[body]', with: 'goodbye'
     click_button 'Create Comment'
-
-
-    fill_in "comment[body]", with: "goodbye"
-    click_button "Create Comment"
 
     click_link "Delete"
     
