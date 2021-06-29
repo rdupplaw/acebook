@@ -2,28 +2,20 @@
 
 require 'rails_helper'
 
-describe 'Sign up' do
-  it 'user can sign up' do
-    visit '/users/new'
-    attach_file 'user_profile_picture', 'spec/files/profile_pic.jpeg'
-    fill_in 'user_firstname', with: 'John'
-    fill_in 'user_lastname', with: 'Doe'
-    fill_in 'user_email', with: 'john@example.com'
-    fill_in 'user_password', with: 'test123'
-    fill_in 'user_password_confirmation', with: 'test123'
-    click_button 'Create account'
-    expect(page).to have_content('John')
-    expect(page).to have_content('Doe')
-    expect(page).to have_content('john@example.com')
+feature 'Sign up' do
+  before do
+    register
+  end
+  scenario 'user can sign up' do
+    visit '/users/1'
+    expect(page).to have_content("John")
+    expect(page).to have_content("Doe")
+    expect(page).to have_content("john@example.com")
     expect(page).to have_css("img[src*='profile_pic.jpeg']")
+  end
 
-    #   register_and_login
-
-    #   click_link "New post"
-    #   fill_in "Message", with: "Hello, world!"
-    #   attach_file 'Image', "spec/files/profile_pic.jpeg"
-    #   click_button "Submit"
-
-    #   expect(page).to have_css("img[src*='3000.jpeg']")
+  scenario "user does not have to log in" do
+    visit posts_path
+    expect(current_path).to eq('/posts')
   end
 end
