@@ -37,12 +37,12 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'database_cleaner-active_record'
   gem 'orderly', '~> 0.1.1'
   gem 'rspec_junit_formatter', '~> 0.4.1'
   gem 'rspec-rails', '~> 4.0'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
-  gem 'database_cleaner-active_record'
 end
 
 group :development do
@@ -55,3 +55,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+# For AWS S3 ActiveStorage
+gem "aws-sdk-s3", require: false

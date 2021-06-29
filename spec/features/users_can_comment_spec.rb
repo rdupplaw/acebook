@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature "Comments", type: :feature do
+RSpec.describe 'Comments', type: :feature do
   before do
     register_and_login
   end
+
 
   scenario "Can leave comments on posts" do
     click_link "New post"
@@ -11,10 +14,9 @@ RSpec.feature "Comments", type: :feature do
     click_button "Submit"
     click_link "View"
     
-    fill_in "comment[commenter]", with: "CharlieS"
     fill_in "comment[body]", with: "goodbye"
     click_button "Create Comment"
-    expect(page).to have_content("CharlieS")
-    expect(page).to have_content("goodbye")
+    expect(page).to have_content("1 comment")
+    expect(current_path).to eq('/posts')
   end
 end
