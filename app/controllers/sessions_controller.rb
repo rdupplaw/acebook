@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+  
+  
   skip_before_action :require_login, only: %i[new create]
-
-  def new; end
+  
+  def new
+    require_login
+  end
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
@@ -20,4 +24,14 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_url
   end
+
+  private
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+    end
+  end
+
+
 end
