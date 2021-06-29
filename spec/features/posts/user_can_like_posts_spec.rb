@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Timeline', type: :feature do
   before do
-    register_and_login
+    register
     
     click_link "New post"
     fill_in "Message", with: "Hello, world!"

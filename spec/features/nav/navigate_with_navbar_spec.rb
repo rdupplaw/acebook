@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'navbar', type: :feature do
   before do
-    register_and_login
+    register
   end
 
   it 'navigates to posts' do

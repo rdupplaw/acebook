@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Comments', type: :feature do
   before do
-    register_and_login
+    register
   end
 
   it 'Can be deleted' do

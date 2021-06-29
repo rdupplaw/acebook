@@ -1,16 +1,5 @@
 # frozen_string_literal: true
 
-def register_and_login
-  register
-
-  visit login_path
-  fill_in 'session[email]', with: 'john@example.com'
-  fill_in 'session[password]', with: 'test123'
-  click_button 'Log in'
-
-  visit posts_path
-end
-
 def register
   visit '/users/new'
   attach_file 'user_profile_picture', 'spec/files/profile_pic.jpeg'
