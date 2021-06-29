@@ -20,11 +20,16 @@
             <% end %>
           </tr>
           <tr>
-            <td><a href="/posts/<%= post.id %>/like">Like</a></td>
+            <td><% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+              <% if pre_like %>
+                <%= link_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+              <% else %>
+                <%= link_to 'Like', post_likes_path(post), method: :post %>
+              <% end %></td>
             <td><%= link_to "View", post_path(post) %><br></td>
           </tr>
           <tr>
-            <td><p></p></td>
+            <td><p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p></td>
             <td><p><%= post.comments.length %> comments</p></td>
           </tr>
         </tbody>
