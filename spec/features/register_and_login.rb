@@ -1,4 +1,5 @@
 def register_and_login
+
   visit '/users/new'
   attach_file 'user_profile_picture', "spec/files/profile_pic.jpeg"
   fill_in "user_firstname", with: "John"

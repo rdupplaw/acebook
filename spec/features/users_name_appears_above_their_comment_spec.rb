@@ -1,11 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature "Comments", type: :feature do
-  before do
+RSpec.feature 'Comments and Users' do 
+  scenario 'username appears next to your comment' do 
     register_and_login
-  end
 
-  scenario "Can be deleted" do
     click_link "New post"
     fill_in "Message", with: "Hello, world!"
     click_button "Submit"
@@ -13,10 +11,6 @@ RSpec.feature "Comments", type: :feature do
 
     fill_in "comment[body]", with: "goodbye"
     click_button "Create Comment"
-
-    click_link "Delete"
-    
-    expect(page).not_to have_content("TestUser")
-    expect(page).not_to have_content("goodbye")
+    expect(page).to have_content("John")
   end
 end
