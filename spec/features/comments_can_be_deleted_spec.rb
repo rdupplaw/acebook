@@ -17,9 +17,13 @@ RSpec.describe 'Comments', type: :feature do
     fill_in 'comment[body]', with: 'goodbye'
     click_button 'Create Comment'
 
-    click_link 'Delete'
 
-    expect(page).not_to have_content('CharlieS')
-    expect(page).not_to have_content('goodbye')
+    fill_in "comment[body]", with: "goodbye"
+    click_button "Create Comment"
+
+    click_link "Delete"
+    
+    expect(page).not_to have_content("TestUser")
+    expect(page).not_to have_content("goodbye")
   end
 end
