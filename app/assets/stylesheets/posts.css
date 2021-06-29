@@ -91,3 +91,12 @@ body {
   font-size: 17px;
 }
 
+.sign_up{
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
