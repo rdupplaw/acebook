@@ -2,7 +2,6 @@ body {
   background-color: rgb(240, 231, 231);
   margin: 20px;
   padding: 20px;
-
   font-family: Didot, sans-serif;
 }
 
@@ -28,6 +27,7 @@ body {
   border: 1px solid rgb(223, 184, 177);
   text-align: center;
 }
+
 
 /* Add a background color to the top navigation */
 .topnav {
@@ -56,6 +56,47 @@ body {
 .topnav a.active {
   background-color: darkgrey;
   color: white;
+}
+
+
+#intro{
+  float:left;
+  width: 40%;
+  padding: 10px ;
+  padding-left: 50px; 
+  padding-top: 50px;
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+}
+
+#log_in{
+  float:right;
+  width:40%;
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: center;
+  font-size: 22px;
+  line-height: 1,2px;
+}
+
+.new{
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: center;
+  font-size: 17px;
+}
+
+.sign_up{
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  box-sizing: border-box;
 }
 
 .delete-post-btn {
