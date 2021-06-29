@@ -7,10 +7,11 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root to: 'sessions#new'
 
-  resources :posts do
-    resources :comments
-    get '/like', on: :member, to: 'posts#like'
-  end
+   root :to => 'sessions#new'
+  
+   resources :posts do
+      resources :comments
+      resources :likes
+   end
 end
