@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-<<<<<<< HEAD
 def register_and_login
-=======
->>>>>>> b86e8e87d32bcae8a987b17f330a46ae5c39b343
   register
 
   visit login_path
