@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature "Comments", type: :feature do
+RSpec.describe 'Comments', type: :feature do
   before do
     register_and_login
   end
+
 
   scenario "Can leave comments on posts" do
     click_link "New post"

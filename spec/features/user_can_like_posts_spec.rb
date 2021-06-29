@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature "Timeline", type: :feature do
+RSpec.describe 'Timeline', type: :feature do
   before do
     register_and_login
   end
+
 
   scenario "Can view zero likes for a post" do
     click_link "New post"
@@ -28,4 +31,5 @@ RSpec.feature "Timeline", type: :feature do
     click_link "Unlike"
     expect(page).to have_content("0 Likes")
   end
+
 end

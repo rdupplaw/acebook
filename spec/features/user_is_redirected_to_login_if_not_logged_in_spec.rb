@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature "Redirect to login", type: :feature do
+RSpec.describe 'Redirect to login', type: :feature do
   it 'posts page redirects to login page' do
     visit '/posts'
 
-    expect(current_path).to eq('/login')
+    expect(page).to have_current_path('/login')
   end
 
   it 'flashes error message when not logged in' do
@@ -16,6 +18,6 @@ RSpec.feature "Redirect to login", type: :feature do
   it 'signup page does not redirect to login page' do
     visit '/users/new'
 
-    expect(current_path).to eq('/users/new')
+    expect(page).to have_current_path('/users/new')
   end
 end
