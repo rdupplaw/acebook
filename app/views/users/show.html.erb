@@ -1,4 +1,5 @@
 <%= @user.firstname %> 
 <%= @user.lastname %>, 
 <%= @user.email %> 
-<%= image_tag @user.profile_picture, class: "profile-pic" %>
+<%= image_tag profile_picture_for(@user), class: "profile-pic" %>
+

@@ -8,8 +8,11 @@
       <table class="content">
         <tbody>
           <tr>
-            <%= image_tag User.find(post.user_id).profile_picture, class: "profile-pic" %>
+            <%= image_tag profile_picture_for(User.find(post.user_id)), class: "profile-pic" %>
             <strong><%= "#{User.find(post.user_id).firstname} #{User.find(post.user_id).lastname}" %></strong>
+            <% if post.user_id == @user.id %>
+                <%= link_to "Delete", post, method: :delete, class: "delete-post-btn" %>
+            <% end %>
           </tr>
           <tr>
           <p><div class="post"><%= post.message %></div></p>
