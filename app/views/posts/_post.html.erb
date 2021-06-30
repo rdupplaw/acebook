@@ -2,7 +2,7 @@
   <tbody>
     <tr>
       <%= image_tag profile_picture_for(User.find(post.user_id)), class: "profile-pic" %>
-      <strong><%= "#{User.find(post.user_id).firstname} #{User.find(post.user_id).lastname}" %></strong>
+      <%= link_to "#{post.user.firstname} #{post.user.lastname}", post.user %>
       <% if post.user_id == @user.id %>
           <%= link_to "Delete", post, method: :delete, class: "delete-post-btn" %>
       <% end %>
