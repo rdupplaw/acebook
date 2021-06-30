@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Comments and Users' do
   it 'username appears next to your comment' do
-    register_and_login
+    register
 
     click_link 'New post'
     fill_in 'Message', with: 'Hello, world!'
