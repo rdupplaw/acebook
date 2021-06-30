@@ -2,6 +2,14 @@
   <%= image_tag profile_picture_for(User.find(comment.user_id)), class: "profile-pic" %>   <%= comment.user.firstname %>  <%= comment.user.lastname %> says: <strong><%= comment.body %>  </strong>
 </p>
 
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>  
+</p>
+
 <p class="subtext">
-  <%= link_to "Delete", [ comment.post, comment ], method: :delete %>
+  <% own_comment = comment.user_id == current_user.id %>
+  <% if own_comment %>
+      <%= link_to "Delete", [ comment.post, comment ], method: :delete %>
+  <% end %>
 </p>
