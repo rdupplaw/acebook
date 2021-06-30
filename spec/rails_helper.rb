@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './features/register_and_login'
+require_relative './features/web_helpers/register'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)

@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Photo post', type: :feature do
   it 'a user can attach an image to their post' do
-    register_and_login
+    register
 
     click_link 'New post'
     fill_in 'Message', with: 'Hello, world!'

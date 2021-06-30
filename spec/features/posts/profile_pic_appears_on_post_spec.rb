@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Timeline', type: :feature do
   before do
-    register_and_login
+    register
   end
 
   it 'Can submit posts and view them' do
