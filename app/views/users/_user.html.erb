@@ -1,0 +1,10 @@
+<%= user.firstname %> 
+<%= user.lastname %>, 
+<%= user.email %>, 
+<%= image_tag profile_picture_for(user), class: "profile-pic" %>
+
+<div class="content">
+  <% user.posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>
