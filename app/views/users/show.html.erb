@@ -1,1 +1,7 @@
 <%= render @user %>
+
+<div class="content">
+  <% @user.posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>
