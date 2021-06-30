@@ -7,7 +7,7 @@
         <a><%= link_to "My Profile", @user %></a>
         <a><%= link_to "Log Out", logout_path, method: :delete %></a>
         <% if logged_in? %>
-          <%= image_tag profile_picture_for(@user.user_id), class: "profile-pic" %>
+          <%= image_tag profile_picture_for(current_user), class: "profile-pic" %>
         <% end %>
       </ul>
     </nav>
