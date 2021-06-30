@@ -1,0 +1,45 @@
+
+#intro{
+  float:left;
+  width: 40%;
+  padding: 10px ;
+  padding-left: 50px; 
+  padding-top: 50px;
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+  font-style: bold;
+}
+
+#log_in{
+  float:right;
+  width:40%;
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: center;
+  font-size: 22px;
+  line-height: 1,2px;
+}
+
+.new{
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: center;
+  font-size: 17px;
+}
+
+.sign_up{
+  padding: 10px ;
+  margin: 5px;
+  border:1px solid rgb(223, 184, 177);
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+
+.delete-post-btn {
+  float: right;
+}

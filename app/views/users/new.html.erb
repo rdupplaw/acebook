@@ -1,31 +1,36 @@
-<% provide(:title, 'Sign up') %>
+<!DOCTYPE html>
+<head>
+  <title>
+    New User Sign Up
+  </title>
+  <% provide(:title, 'Sign up') %>
+</head>
 <body>
-<h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
+  <h1>Sign up</h1>
+  <p>Please fill up the information below.</p>
+    <div class="sign_up">
+      <%= form_for @user, class: "signupForm" do |f| %>
+      <%= render 'shared/error_messages' %>
+      
+      <%= f.label :profile_picture %>
+      <%= f.file_field :profile_picture %> <br />
+      
+      <%= f.label :first_name %>
+      <%= f.text_field :firstname, class: "shortInput" %> <br />
 
-<div class="sign_up">
-<%= form_for @user, class: "signupForm" do |f| %>
-  <%= render 'shared/error_messages' %>
-  
-  <%= f.label :profile_picture %>
-  <%= f.file_field :profile_picture %> <br />
-  
-  <%= f.label :first_name %>
-  <%= f.text_field :firstname, class: "shortInput" %> <br />
+      <%= f.label :last_name %>
+      <%= f.text_field :lastname, class: "shortInput" %> <br />
 
-  <%= f.label :last_name %>
-  <%= f.text_field :lastname, class: "shortInput" %> <br />
+      <%= f.label :email, "Email Address" %>
+      <%= f.text_field :email, class: "shortInput" %> <br />
 
-  <%= f.label :email, "Email Address" %>
-  <%= f.text_field :email, class: "shortInput" %> <br />
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "shortInput" %> <br />
 
-  <%= f.label :password %>
-  <%= f.password_field :password, class: "shortInput" %> <br />
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "shortInput" %> <br />
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, class: "shortInput" %> <br />
-
-  <%= f.submit "Create account", class: "button createAccount" %>
-<% end %>
-</div>
+      <%= f.submit "Create account", class: "button createAccount" %>
+    <% end %>
+  </div>
 </body>
