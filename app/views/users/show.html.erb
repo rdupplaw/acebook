@@ -1,4 +1,27 @@
-<%= @user.firstname %> 
-<%= @user.lastname %>, 
-<%= @user.email %> 
-<%= image_tag profile_picture_for(@user), class: "profile-pic" %>
+<!DOCTYPE html>
+<head>
+<title>Profile</title>
+</head>
+<body>
+  <h1> Your Acebook Profile </h1>
+  <div class=“sign_up”>
+    <p>
+    <%= image_tag profile_picture_for(@user), class: "user-pic" %>
+    </p>
+    <p>
+    <%= @user.firstname %>
+    <%= @user.lastname %>
+    </p>
+    <p>
+    <%= @user.email %>
+    </p>
+  </div>
+
+  <%= form_for @user do |f| %>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %> <br />
+
+    <%= f.submit %>
+  <% end %>
+    <%= @user.firstname %>
+</body>
