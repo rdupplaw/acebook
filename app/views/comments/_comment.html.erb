@@ -9,5 +9,8 @@
 </p>
 
 <p>
-  <%= link_to "Delete", [ comment.post, comment ], method: :delete %>
+  <% own_comment = comment.user_id == current_user.id %>
+  <% if own_comment %>
+      <%= link_to "Delete", [ comment.post, comment ], method: :delete %>
+  <% end %>
 </p>
