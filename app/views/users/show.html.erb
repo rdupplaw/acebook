@@ -17,11 +17,8 @@
     </p>
   </div>
 
-  <%= form_for @user do |f| %>
-    <%= f.label :bio %>
-    <%= f.text_field :bio %> <br />
+    <%= link_to "Edit Profile", edit_user_path(@user) %>
 
-    <%= f.submit %>
-  <% end %>
-    <%= @user.firstname %>
+    <p>Bio: <%= @user.bio %></p>
+    <p>Age: <%= @user.age %></p>
 </body>
