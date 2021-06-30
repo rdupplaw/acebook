@@ -1,12 +1,7 @@
 <p>
-  <%= image_tag profile_picture_for(User.find(comment.user_id)), class: "profile-pic" %>  <%= comment.user.firstname %> 
+  <%= image_tag profile_picture_for(User.find(comment.user_id)), class: "profile-pic" %>   <%= comment.user.firstname %>  <%= comment.user.lastname %> says: <strong><%= comment.body %>  </strong>
 </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>  
-</p>
-
-<p>
+<p class="subtext">
   <%= link_to "Delete", [ comment.post, comment ], method: :delete %>
 </p>

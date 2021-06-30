@@ -3,6 +3,7 @@ body {
   margin: 20px;
   padding: 20px;
   font-family: Didot, sans-serif;
+  font-size: 17px;
 }
 
 .container {
@@ -58,10 +59,27 @@ body {
   color: white;
 }
 
+.commentpost {
+  background-color: rgb(252, 248, 248);
+  border: 2px solid rgb(223, 184, 177);
+  padding:15px;
+}
+
 .comment {
   margin: 5px;
   border: 1px solid rgb(223, 184, 177);
   text-align: left;
   width: 400px;
   padding: 15px;
+}
+
+.commentarea {
+  font-size: 17px;
+  line-height: 1,5px;
+}
+
+.subtext {
+  font-family: Didot, sans-serif;
+  font-size: 14px;
+  color:gray;
 }
