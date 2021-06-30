@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Timeline', type: :feature do
+RSpec.describe 'Likes', type: :feature do
   before do
     register
     
@@ -13,18 +13,18 @@ RSpec.describe 'Timeline', type: :feature do
 
 
   scenario "Can view zero likes for a post" do
-    expect(page).to have_content("0 Likes")
+    expect(page).to have_content("0 likes")
   end
 
   scenario "Can click on likes and increase number of likes" do
     click_link "Like"
-    expect(page).to have_content("1 Like")
+    expect(page).to have_content("1 like")
   end
 
   scenario "Can only unlike post if have already liked said post" do 
     click_link "Like"
     click_link "Unlike"
-    expect(page).to have_content("0 Likes")
+    expect(page).to have_content("0 likes")
   end
 
   scenario "Liking a post from the index refreshes the index" do 
