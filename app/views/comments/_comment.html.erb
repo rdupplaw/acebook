@@ -1,6 +1,5 @@
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.user.firstname %>
+  <%= image_tag profile_picture_for(User.find(comment.user_id)), class: "profile-pic" %>  <%= comment.user.firstname %> 
 </p>
 
 <p>

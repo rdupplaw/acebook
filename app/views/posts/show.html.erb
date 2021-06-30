@@ -1,8 +1,14 @@
-<h1><%= @post.message %></h1>
-
-<p>Comments</p>
+<!DOCTYPE html>
+<head>
+<title>Post</title>
+</head>
+<body>
+<%= image_tag profile_picture_for(User.find(post.user_id)), class: "profile-pic" %> <%= "#{User.find(post.user_id).firstname} #{User.find(post.user_id).lastname}" %> Post
+<h2><%= @post.message %></h2>
+<div class="comment">
+<h3>Comments :</h3>
 <p>
-  <%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%> - <%= @post.comments.length %> comments
+  <%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%> - <%= @post.comments.length %> Comments
 </p>
 <%= render @post.comments %>
 
@@ -13,3 +19,5 @@
     <%= link_to 'Like', post_likes_path(@post), method: :post %>
   <% end %> - Add a comment</p>
 <%= render 'comments/form' %>
+</div>
+</body>
