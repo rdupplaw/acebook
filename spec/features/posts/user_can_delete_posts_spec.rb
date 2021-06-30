@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Timeline', type: :feature do
   before do
-    register_and_login
+    register
   end
 
   context "A post belonging to a user" do
