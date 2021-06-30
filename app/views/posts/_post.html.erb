@@ -1,0 +1,32 @@
+<table class="content">
+  <tbody>
+    <tr>
+      <%= image_tag profile_picture_for(User.find(post.user_id)), class: "profile-pic" %>
+      <strong><%= "#{User.find(post.user_id).firstname} #{User.find(post.user_id).lastname}" %></strong>
+      <% if post.user_id == @user.id %>
+          <%= link_to "Delete", post, method: :delete, class: "delete-post-btn" %>
+      <% end %>
+    </tr>
+    <tr>
+    <p><div class="post"><%= post.message %></div></p>
+    </tr>
+    <tr>
+      <% if post.image.attached? %>
+        <%= image_tag post.image %>
+      <% end %>
+    </tr>
+    <tr>
+      <td><% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+        <% if pre_like %>
+          <%= link_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+        <% else %>
+          <%= link_to 'Like', post_likes_path(post), method: :post %>
+        <% end %></td>
+      <td><%= link_to "View", post_path(post) %><br></td>
+    </tr>
+    <tr>
+      <td><p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p></td>
+      <td><p><%= post.comments.length %> comments</p></td>
+    </tr>
+  </tbody>
+</table>
