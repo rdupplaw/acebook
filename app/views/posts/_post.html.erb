@@ -25,7 +25,7 @@
       <td><%= link_to "View", post_path(post) %><br></td>
     </tr>
     <tr>
-      <td><p><%= pluralize(post.likes.count, 'like') %></p></td>
+      <td><p><%= link_to pluralize(post.likes.count, 'like'), post_likes_path(post) %></p></td>
       <td><p><%= pluralize(post.comments.count, 'comment') %></p></td>
     </tr>
   </tbody>

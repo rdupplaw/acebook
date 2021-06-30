@@ -2,6 +2,9 @@ class LikesController < ApplicationController
   before_action :find_post
   before_action :find_like, only: [:destroy]
 
+  def index
+  end
+
   def create
     if already_liked?
       flash[:notice] = "You can't like more than once"

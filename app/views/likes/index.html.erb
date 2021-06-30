@@ -1,0 +1,6 @@
+<h2>Likes</h2>
+<% @post.likes.each do |like| %>
+  <p>
+    <%= render like.user %>
+  </p>
+<% end %>

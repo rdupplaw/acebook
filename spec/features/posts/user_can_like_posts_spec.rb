@@ -37,4 +37,11 @@ RSpec.describe 'Likes', type: :feature do
     click_link "Like"
     expect(current_path).to eq('/posts/1')
   end
+
+  scenario "Can see list of likes" do
+    click_link "Like"
+    click_link "1 like"
+
+    expect(page).to have_content('John Doe')
+  end
 end
