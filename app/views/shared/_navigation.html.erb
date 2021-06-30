@@ -1,12 +1,13 @@
+
 <header class="navbar">
   <div class="topnav">
     <nav>
       <ul>
-        <%= link_to "Posts", posts_path %>  
-        <%= link_to "My Profile", @user %>  
-        <%= link_to "Log Out", logout_path, method: :delete %>  
+        <a><%= link_to "Posts", posts_path %></a>
+        <a><%= link_to "My Profile", @user %></a>
+        <a><%= link_to "Log Out", logout_path, method: :delete %></a>
         <% if logged_in? %>
-          <%= image_tag profile_picture_for(@user), class: "profile-pic" %>
+          <%= image_tag profile_picture_for(@user.user_id), class: "profile-pic" %>
         <% end %>
       </ul>
     </nav>
