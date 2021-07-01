@@ -36,14 +36,14 @@ First, clone this repository. Then:
 
 ## Instructions for starting up a new ticket
 
-```bash
+
 1. Pull the last version of Acebook from the MAIN branch from Github
 2. Run $rails db:migrate to ensure working with a fresh version of <schema.rb>
 2. Create a branch: `git checkout -b <branch_name>`.
 3. Make your changes and commit them: `git commit -m '<commit_message>'`
 4. Push to the original branch: `git push origin <project_name>/<location>`
 5. Create the pull request.
-```
+
 
 ## Troubleshooting
 
