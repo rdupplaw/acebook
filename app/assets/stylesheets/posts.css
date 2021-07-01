@@ -84,6 +84,11 @@ body {
   color:gray;
 }
 
+.post-image {
+  height: 60%;
+  width: 60%;
+}
+  
 .newpost {
   margin: 10px;
   padding: 20px;
