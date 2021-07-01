@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
   
   def new
-    require_login
+    if logged_in?
+      redirect_to posts_path
+    else
+      require_login
+    end
   end
 
   def create
