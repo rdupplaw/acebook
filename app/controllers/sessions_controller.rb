@@ -29,7 +29,8 @@ class SessionsController < ApplicationController
 
   def require_login
     unless logged_in?
-      flash[:error] = "You must be logged in to access this section"
+      flash.now[:error] = "You must be logged in to access this section"
+      render :new
     end
   end
 
