@@ -83,3 +83,8 @@ body {
   font-size: 14px;
   color:gray;
 }
+
+.post-image{
+  height: 60%;
+  width: 60%;
+}
