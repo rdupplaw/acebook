@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe 'Log in', type: :feature do
   before do
     register
+    click_link "Log Out"
   end
 
   it 'login fails when the user enters an incorrect email address' do

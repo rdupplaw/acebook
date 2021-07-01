@@ -28,5 +28,8 @@
       <td><p><%= link_to pluralize(post.likes.count, 'like'), post_likes_path(post) %></p></td>
       <td><p><%= pluralize(post.comments.count, 'comment') %></p></td>
     </tr>
+    <tr>
+      <td><p><%= time_ago_in_words(post.created_at) %> ago</p></td>
+    </tr>
   </tbody>
 </table>

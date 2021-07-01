@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
   
   def new
-    require_login
+    if logged_in?
+      redirect_to posts_path
+    else
+      require_login
+    end
   end
 
   def create
@@ -29,7 +33,7 @@ class SessionsController < ApplicationController
 
   def require_login
     unless logged_in?
-      flash[:error] = "You must be logged in to access this section"
+      flash.now[:error] = "You must be logged in to access this section"
     end
   end
 

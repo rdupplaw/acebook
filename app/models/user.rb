@@ -13,4 +13,6 @@ class User < ApplicationRecord
   has_one_attached :profile_picture
   has_many :posts
   has_many :likes, dependent: :destroy
+
+  store :profile, accessors: [:bio, :age, :home_town, :education, :workplace, :relationship_status], coder: JSON
 end
