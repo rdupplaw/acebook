@@ -80,6 +80,13 @@ body {
   color: white;
 }
 
+.navprofile {
+  margin-right:50px;
+  float: right;
+  text-align: right;
+  vertical-align: middle;
+}
+
 .commentpost {
   background-color: rgb(252, 248, 248);
   border: 2px solid rgb(223, 184, 177);
