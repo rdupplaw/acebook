@@ -16,6 +16,7 @@ RSpec.describe 'Profile page', type: :feature do
     fill_in "Home town", with: "My town"
     fill_in "Education", with: "Some school"
     fill_in "Workplace", with: "Home"
+    find(:select).find(:option, "Single").select_option
     click_button "Save changes"
 
     expect(page).to have_content("This is my bio")
@@ -23,6 +24,7 @@ RSpec.describe 'Profile page', type: :feature do
     expect(page).to have_content("My town")
     expect(page).to have_content("Some school")
     expect(page).to have_content("Home")
+    expect(page).to have_content("Single")
   end
 
   it 'allows user to edit profile' do
