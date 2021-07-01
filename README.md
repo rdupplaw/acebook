@@ -1,8 +1,20 @@
 [![mvgame74](https://circleci.com/gh/mvgame74/acebook-rails-The-Wallies.svg?style=svg&circle-token=692d9c4c326e8e079500a081b14042d7f4f35637)](https://circleci.com/gh/mvgame74/acebook-rails-The-Wallies)
 
-# AceBook
+# ACEBOOK by The Wallies
 
-https://aqueous-harbor-18057.herokuapp.com/posts
+![GitHub commit activity](/github/commit-activity/:interval/:user/:repo)
+![GitHub contributors](/github/:variant/:user/:repo)
+![GitHub closed pull requests](/github/issues-pr-closed-raw/:user/:repo)
+![GitHub last commit](/github/last-commit/:user/:repo/:branch)
+
+
+GitHub closed pull requests:	GitHub closed pull requests badge	/github/issues-pr-closed-raw/:user/:repo
+
+
+![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
+
+
+You can find our application **[HERE](https://aqueous-harbor-18057.herokuapp.com/posts)**.
 
 
 ## About the Project 
@@ -10,6 +22,8 @@ https://aqueous-harbor-18057.herokuapp.com/posts
 This project is a web application that clones the main features of Facebook, users can create an account, and post messages and photos, as well as posting comments on other posts.
 
 This project was built in weeks 8/9 of the Makers Academy course in a team of 8, using AGILE development process with sprints lasting 2 days.
+
+We added features to be able to personalise a user's profile, and check their posts, as well as the profiles of other users who have posted.
 
 ### Built with
 
@@ -52,11 +66,7 @@ Rails requires a Javascript runtime to work. The easiest way is to install Node 
 # Project name
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
-![GitHub repo size](https://img.shields.io/github/repo-size/scottydocs/README-template.md)
-![GitHub contributors](https://img.shields.io/github/contributors/scottydocs/README-template.md)
-![GitHub stars](https://img.shields.io/github/stars/scottydocs/README-template.md?style=social)
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
+
 
 Project name is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
 
@@ -114,12 +124,3 @@ Thanks to the following people who have contributed to this project:
 * [@calchuchesta](https://github.com/calchuchesta) 🐛
 
 You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
-
-## Contact
-
-If you want to contact me you can reach me at <your_email@address.com>.
-
-## License
-<!--- If you're not sure which open license to use see https://choosealicense.com/--->
-
-This project uses the following license: [<license_name>](<link>).
