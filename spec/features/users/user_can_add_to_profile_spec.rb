@@ -56,4 +56,20 @@ RSpec.describe 'Profile page', type: :feature do
 
     expect(page).not_to have_content("Bio:")
   end
+
+  it 'can only be edited by the owner of the profile' do
+    click_link "My Profile"
+    click_link "Edit Profile"
+
+    fill_in "Bio", with: "This is my bio"
+    click_button "Save changes"
+
+    click_link "Log Out"
+
+    register_second_user
+
+    visit "/users/1"
+
+    expect(page).not_to have_content("Edit Profile")
+  end
 end
