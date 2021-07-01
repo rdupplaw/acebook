@@ -8,7 +8,7 @@ body {
 
 .container {
   background-color: rgb(252, 248, 248);
-  border: 2px solid rgb(223, 184, 177);
+  border: 2px solid rgb(203, 172, 172);
 }
 
 .title {
@@ -18,22 +18,28 @@ body {
 .post {
   padding: 10px;
   margin: 5px;
-  border: 2px solid rgb(223, 184, 177);
+  border: 2px solid rgb(203, 172, 172);
   text-align: center;
+  float: right;
+  width: 90%;
 }
 
 .content {
   padding: 10px;
   margin: 5px;
-  border: 1px solid rgb(223, 184, 177);
-  text-align: center;
+  border: 2px solid rgb(203, 172, 172);
+  text-align: left;
 }
 
+.delete-post-btn {
+  font-size: 15px;
+  text-align: left;
+  float: right;
+}
 
 /* Add a background color to the top navigation */
 .topnav {
-  background-color: rgb(223, 184, 177);
-
+  background-color: rgb(203, 172, 172);
   overflow: hidden;
 }
 
