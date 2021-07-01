@@ -2,12 +2,13 @@ body {
   background-color: rgb(240, 231, 231);
   margin: 20px;
   padding: 20px;
-  font-family: Didot, sans-serif;
+  font-family: 'Futura';
   font-size: 17px;
 }
 
 .title {
   text-align: center;
+  font-family: 'Futura';
 }
 
 .container {
