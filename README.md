@@ -72,7 +72,13 @@ The people who have contributed to this project:
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/mvgame/acebook-rails-The-Wallies)
 ![GitHub contributors](https://img.shields.io/github/contributors/mvgame/acebook-rails-The-Wallies)
-![GitHub stars](https://img.shields.io/github/stars/scottydocs/README-template.md?style=social)
+
+
+
+
+![GitHub stars](https://img.shields.io/github/stars/mvgame/acebook-rails-The-Wallies?style=social)
+
+
 ![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
 
