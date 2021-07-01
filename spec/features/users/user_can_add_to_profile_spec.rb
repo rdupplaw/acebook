@@ -13,10 +13,16 @@ RSpec.describe 'Adding to profile', type: :feature do
 
     fill_in "Bio", with: "This is my bio"
     fill_in "Age", with: "24"
+    fill_in "Home town", with: "My town"
+    fill_in "Education", with: "Some school"
+    fill_in "Workplace", with: "Home"
     click_button "Update User"
 
     expect(page).to have_content("This is my bio")
     expect(page).to have_content("24")
+    expect(page).to have_content("My town")
+    expect(page).to have_content("Some school")
+    expect(page).to have_content("Home")
   end
 
   it 'user can edit profile' do

@@ -14,5 +14,5 @@ class User < ApplicationRecord
   has_many :posts
   has_many :likes, dependent: :destroy
 
-  store :profile, accessors: [:bio, :age], coder: JSON
+  store :profile, accessors: [:bio, :age, :home_town, :education, :workplace], coder: JSON
 end
