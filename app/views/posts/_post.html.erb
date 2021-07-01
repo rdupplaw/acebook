@@ -1,13 +1,13 @@
-<table class="content">
+<table class="table">
   <tbody>
     <tr>
-      <td width="15%">
-        <p><%= image_tag profile_picture_for(post.user), class: "profile-pic" %>
-        <%= link_to "#{post.user.firstname} #{post.user.lastname}", post.user %></p>
-        <p class= "poster-info"><%= time_ago_in_words(post.created_at) %> ago</p>
-        <% if post.user == current_user %>
-          <p class= "poster-info"><%= link_to "Delete", post, method: :delete %></p>
-        <% end %>
+      <td width="15%" VALIGN=TOP>
+          <p><%= image_tag profile_picture_for(post.user), class: "profile-pic" %>
+          <%= link_to "#{post.user.firstname} #{post.user.lastname}", post.user %></p>
+          <p class= "poster-info"><%= time_ago_in_words(post.created_at) %> ago</p>
+          <% if post.user == current_user %>
+            <p class= "poster-info"><%= link_to "Delete", post, method: :delete %></p>
+          <% end %>
       </td>
       <td>
         <div class="post"><%= post.message %>
@@ -19,15 +19,18 @@
     </tr>
     <tr>
       <td width="15%"></td>
-      <td><% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
-        <% if pre_like %>
-          <%= link_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
-        <% else %>
-          <%= link_to 'Like', post_likes_path(post), method: :post %>
-        <% end %> - 
-        <%= link_to pluralize(post.likes.count, 'like'), post_likes_path(post) %> - 
-        <%= pluralize(post.comments.count, 'comment') %> - 
-        <%= link_to "View", post_path(post) %></p>
+      <td>
+        <div class="underpost">
+        <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+          <% if pre_like %>
+            <%= link_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+          <% else %>
+            <%= link_to 'Like', post_likes_path(post), method: :post %>
+          <% end %> - 
+          <%= link_to pluralize(post.likes.count, 'like'), post_likes_path(post) %> - 
+          <%= pluralize(post.comments.count, 'comment') %> - 
+          <%= link_to "View", post_path(post) %></p>
+        </div>
       </td>
     </tr>
   </tbody>
