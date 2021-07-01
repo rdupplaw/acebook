@@ -2,7 +2,7 @@
 
 # ACEBOOK by The Wallies
 
-![GitHub commit activity](/github/commit-activity/:interval/:user/:repo)
+![GitHub commit activity](https://github.com/mvgame74/acebook-rails-The-Wallies/commit-activity/:interval/:user/:repo)
 ![GitHub contributors](/github/:variant/:user/:repo)
 ![GitHub closed pull requests](/github/issues-pr-closed-raw/:user/:repo)
 ![GitHub last commit](/github/last-commit/:user/:repo/:branch)
