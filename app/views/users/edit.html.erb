@@ -10,6 +10,8 @@
     <%= f.text_field :education %> <br />
     <%= f.label :workplace %> <br />
     <%= f.text_field :workplace %> <br />
+    <%= f.label :relationship_status %> <br />
+    <%= f.select :relationship_status, ["", "Single", "In a relationship" ,"It's complicated"] %> <br />
 
-    <%= f.submit %>
+    <%= f.submit "Save changes" %>
   <% end %>
