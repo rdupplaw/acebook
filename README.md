@@ -60,15 +60,21 @@ Rails requires a Javascript runtime to work. The easiest way is to install Node 
 
 The people who have contributed to this project:
 
-* [Charlie Casserly](https://github.com/charlie-casserly)💻🔣📖📦👀📓
-* [Charlie Slater](https://github.com/cms718)💻🔣📖📦👀📓
-* [Felix Piercy](https://github.com/fel1xp)💻🔣📖📦👀📓
-* [Jonny Kelly](https://github.com/JD-Kelly)💻🔣📖📦👀📓
-* [Maria Valero](https://github.com/mvgame74)💻🔣📖📦👀📓
-* [Robert Dupplaw](https://github.com/rdupplaw)💻🔣📖📦👀📓
-* [Russell Horth](https://github.com/russell-h)💻🔣📖📦👀📓
-* [Willoughby Hood](https://github.com/Wh3g)💻🔣📖📦👀📓
+* [Charlie Casserly](https://github.com/charlie-casserly) 💻 🔣 📖 📦 👀 📓
+* [Charlie Slater](https://github.com/cms718) 💻 🔣 📖 📦 👀 📓
+* [Felix Piercy](https://github.com/fel1xp) 💻 🔣 📖 📦 👀 📓
+* [Jonny Kelly](https://github.com/JD-Kelly) 💻 🔣 📖 📦 👀 📓
+* [Maria Valero](https://github.com/mvgame74) 💻 🔣 📖 📦 👀 📓
+* [Robert Dupplaw](https://github.com/rdupplaw) 💻 🔣 📖 📦 👀 📓
+* [Russell Horth](https://github.com/russell-h)💻 🔣 📖 📦 👀 📓
+* [Willoughby Hood](https://github.com/Wh3g) 💻 🔣 📖 📦 👀 📓
 
+
+![GitHub repo size](https://img.shields.io/github/repo-size/mvgame/acebook-rails-The-Wallies)
+![GitHub contributors](https://img.shields.io/github/contributors/mvgame/acebook-rails-The-Wallies)
+![GitHub stars](https://img.shields.io/github/stars/scottydocs/README-template.md?style=social)
+![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
 
 
 [![GitHub commit activity](https://github-readme-stats.vercel.app/api?username=mvgame)](https://github.com/mvgame74)
