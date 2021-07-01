@@ -18,6 +18,8 @@ We added features to be able to personalise a user's profile, and check their po
 The main technologies used in this project are as follows:
 
 * Ruby on Rails
+* HTML
+* CSS
 
 ## Getting started
 
@@ -35,9 +37,12 @@ First, clone this repository. Then:
 ## Instructions for starting up a new ticket
 
 ```bash
-> pull the last version of Acebook in the MAIN branch from Git hub
-> run $rails db:migrate to ensure producing a fresh verion of schema.rb in your machine
-> create a new branch to work with $git branch -b thisIsMyNewTicket
+1. Pull the last version of Acebook from the MAIN branch from Github
+2. Run $rails db:migrate to ensure working with a fresh version of <schema.rb>
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <project_name>/<location>`
+5. Create the pull request.
 ```
 
 ## Troubleshooting
