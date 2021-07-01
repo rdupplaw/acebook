@@ -1,6 +1,6 @@
 [![mvgame74](https://circleci.com/gh/mvgame74/acebook-rails-The-Wallies.svg?style=svg&circle-token=692d9c4c326e8e079500a081b14042d7f4f35637)](https://circleci.com/gh/mvgame74/acebook-rails-The-Wallies)
 
-# ACEBOOK by The Wallies
+# AceBook by The Wallies
 
 You can find our application **[HERE](https://aqueous-harbor-18057.herokuapp.com/posts)**.
 
