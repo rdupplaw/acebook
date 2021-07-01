@@ -1,14 +1,27 @@
-<div class="container" >
-<%= form_for @post do |form| %>
-  <div>
-    <%= form.label :message %>
-    <%= form.text_field :message %>
-  </div>
+<!DOCTYPE html>
+<head>
+<title>New Post</title>
+</head>
+<body>
+  <div class="container" >
+    <%= form_for @post do |form| %>
+      <div class = "newpost">
+        <%= form.label :message %>
+        <%= form.text_field :message %>
+        <br>
+      </div>
 
-  <div>
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+      <div class = "newpost">
+        <%= form.label :image %>
+        <%= form.file_field :image %>
+        <br><br>
+        </div>
+        <div class = "newpost">
+      <%= form.submit "Submit" %>
+      </div>
+      <br>
+    <% end %>
+
   </div>
-  <%= form.submit "Submit" %>
-<% end %>
-</div>
+</body>
+</html>
