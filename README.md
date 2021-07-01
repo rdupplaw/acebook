@@ -69,36 +69,3 @@ The people who have contributed to this project:
 * [Russell Horth](https://github.com/russell-h)💻 🔣 📖 📦 👀 📓
 * [Willoughby Hood](https://github.com/Wh3g) 💻 🔣 📖 📦 👀 📓
 
-
-![GitHub repo size](https://img.shields.io/github/repo-size/mvgame/acebook-rails-The-Wallies)
-![GitHub contributors](https://img.shields.io/github/contributors/mvgame/acebook-rails-The-Wallies)
-
-
-
-
-![GitHub stars](https://img.shields.io/github/stars/mvgame/acebook-rails-The-Wallies?style=social)
-
-
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
-
-
-[![GitHub commit activity](https://github-readme-stats.vercel.app/api?username=mvgame)](https://github.com/mvgame74)
-
-
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mvgame/acebook-rails-The-Wallies?color=pink)
-![GitHub contributors](/github/:variant/:user/:repo)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mvgame74/acebook-rails-The-Wallies?color=blue)
-![GitHub last commit](/github/last-commit/:user/:repo/:branch)
-
-
-GitHub closed pull requests:	GitHub closed pull requests badge	/github/issues-pr-closed-raw/:user/:repo
-
-https://img.shields.io/github/issues-pr-closed/mvgame/acebook-rails-The-Wallies?color=blue
-
-
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
-
-
-![GitHub forks](https://img.shields.io/github/forks/mvgame74/acebook-rails-The-Wallies/README-template.md?style=social)
-
