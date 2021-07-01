@@ -83,3 +83,10 @@ body {
   font-size: 14px;
   color:gray;
 }
+
+.newpost {
+  margin: 10px;
+  font-family: Didot, sans-serif;
+  font-size: 17px;
+  line-height: 2px;
+}
