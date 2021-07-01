@@ -2,23 +2,6 @@
 
 # ACEBOOK by The Wallies
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mvgame/acebook-rails-The-Wallies?color=pink)
-![GitHub contributors](/github/:variant/:user/:repo)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mvgame74/acebook-rails-The-Wallies?color=blue)
-![GitHub last commit](/github/last-commit/:user/:repo/:branch)
-
-
-GitHub closed pull requests:	GitHub closed pull requests badge	/github/issues-pr-closed-raw/:user/:repo
-
-https://img.shields.io/github/issues-pr-closed/mvgame/acebook-rails-The-Wallies?color=blue
-
-
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
-
-
-![GitHub forks](https://img.shields.io/github/forks/mvgame74/acebook-rails-The-Wallies/README-template.md?style=social)
-
-
 You can find our application **[HERE](https://aqueous-harbor-18057.herokuapp.com/posts)**.
 
 
@@ -129,3 +112,23 @@ Thanks to the following people who have contributed to this project:
 * [@calchuchesta](https://github.com/calchuchesta) 🐛
 
 You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
+
+
+
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mvgame/acebook-rails-The-Wallies?color=pink)
+![GitHub contributors](/github/:variant/:user/:repo)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mvgame74/acebook-rails-The-Wallies?color=blue)
+![GitHub last commit](/github/last-commit/:user/:repo/:branch)
+
+
+GitHub closed pull requests:	GitHub closed pull requests badge	/github/issues-pr-closed-raw/:user/:repo
+
+https://img.shields.io/github/issues-pr-closed/mvgame/acebook-rails-The-Wallies?color=blue
+
+
+![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
+
+
+![GitHub forks](https://img.shields.io/github/forks/mvgame74/acebook-rails-The-Wallies/README-template.md?style=social)
+
