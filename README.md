@@ -4,11 +4,13 @@
 
 ![GitHub commit activity](https://github.com/mvgame74/acebook-rails-The-Wallies/commit-activity/:interval/:user/:repo)
 ![GitHub contributors](/github/:variant/:user/:repo)
-![GitHub closed pull requests](/github/issues-pr-closed-raw/:user/:repo)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mvgame/acebook-rails-The-Wallies?color=blue)
 ![GitHub last commit](/github/last-commit/:user/:repo/:branch)
 
 
 GitHub closed pull requests:	GitHub closed pull requests badge	/github/issues-pr-closed-raw/:user/:repo
+
+https://img.shields.io/github/issues-pr-closed/mvgame/acebook-rails-The-Wallies?color=blue
 
 
 ![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
