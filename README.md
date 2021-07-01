@@ -14,6 +14,9 @@ GitHub closed pull requests:	GitHub closed pull requests badge	/github/issues-pr
 ![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
 
 
+![GitHub forks](https://img.shields.io/github/forks/mvgame74/acebook-rails-The-Wallies/README-template.md?style=social)
+
+
 You can find our application **[HERE](https://aqueous-harbor-18057.herokuapp.com/posts)**.
 
 
