@@ -2,9 +2,9 @@
 
 # ACEBOOK by The Wallies
 
-![GitHub commit activity](https://github.com/mvgame74/acebook-rails-The-Wallies/commit-activity/:interval/:user/:repo)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mvgame/acebook-rails-The-Wallies?color=pink)
 ![GitHub contributors](/github/:variant/:user/:repo)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mvgame/acebook-rails-The-Wallies?color=blue)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mvgame74/acebook-rails-The-Wallies?color=blue)
 ![GitHub last commit](/github/last-commit/:user/:repo/:branch)
 
 
