@@ -86,7 +86,15 @@ body {
 
 .newpost {
   margin: 10px;
+  padding: 20px;
   font-family: Didot, sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 2px;
+  text-align: left;
+}
+
+.textarea * {
+  vertical-align: middle;
+  height: 300px;
+  width: 90%;
 }

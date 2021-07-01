@@ -6,9 +6,11 @@
   <div class="container" >
     <%= form_for @post do |form| %>
       <div class = "newpost">
+        <div class="textarea">
         <%= form.label :message %>
-        <%= form.text_field :message %>
+        <%= form.text_area :message %>
         <br>
+        </div>
       </div>
 
       <div class = "newpost">
