@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<head>
-<title>Profile</title>
-</head>
-<body>
-  <h1> Your Acebook Profile </h1>
-  <div class=“sign_up”>
-    <p>
-    <%= image_tag profile_picture_for(@user), class: "user-pic" %>
-    </p>
-    <p>
-    <%= @user.firstname %>
-    <%= @user.lastname %>
-    </p>
-    <p>
-    <%= @user.email %>
-    </p>
-  </div>
-  
-  <div>
-  <% @user.profile.each do |key, value| %>
-    <% unless value.empty? %>
-      <p><%= key.capitalize.gsub("_", " ") %>: <%= value %></p>
-    <% end %>
-  <% end %>
-  </div>
-
-  <%= link_to "Edit Profile", edit_user_path(@user) %>
-
-  <div class="content">
-  <% @user.posts.each do |post| %>
-    <%= render post %>
-  <% end %>
+<h1> Your Acebook Profile </h1>
+<div class=“sign_up”>
+  <p>
+  <%= image_tag profile_picture_for(@user), class: "user-pic" %>
+  </p>
+  <p>
+  <%= @user.firstname %>
+  <%= @user.lastname %>
+  </p>
+  <p>
+  <%= @user.email %>
+  </p>
 </div>
-</body>
+
+<div>
+<% @user.profile.each do |key, value| %>
+  <% unless value.empty? %>
+    <p><%= key.capitalize.gsub("_", " ") %>: <%= value %></p>
+  <% end %>
+<% end %>
+</div>
+
+<%= link_to "Edit Profile", edit_user_path(@user) %>
+
+<div class="content">
+<% @user.posts.each do |post| %>
+  <%= render post %>
+<% end %>
+</div>
