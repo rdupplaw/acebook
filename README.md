@@ -71,6 +71,8 @@ The people who have contributed to this project:
 
 
 
+[![GitHub commit activity](https://github-readme-stats.vercel.app/api?username=mvgame)](https://github.com/mvgame74/acebook-rails-The-Wallies)
+
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mvgame/acebook-rails-The-Wallies?color=pink)
 ![GitHub contributors](/github/:variant/:user/:repo)
