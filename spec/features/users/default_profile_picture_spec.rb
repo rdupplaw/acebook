@@ -15,7 +15,7 @@ RSpec.describe 'Default profile picture', type: :feature do
     end
 
     it 'shows the default profile picture on their profile' do
-      click_link 'My Profile'
+      click_link 'John Doe'
 
       expect(page).to have_css("img[src*='/assets/default_profile_picture']")
     end

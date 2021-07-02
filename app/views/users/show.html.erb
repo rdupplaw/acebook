@@ -1,4 +1,12 @@
-<h1> Your Acebook Profile </h1>
+<!DOCTYPE html>
+<head>
+<title>Your AceBook Profile </title>
+</head>
+<body>
+<h1 class="title"> <%= @user.firstname %> <%= @user.lastname %>'s Profile </h1>
+<table class="table">
+<tr>
+<td VALIGN=TOP>
 <div class=“sign_up”>
   <p>
   <%= image_tag profile_picture_for(@user), class: "user-pic" %>
@@ -18,14 +26,20 @@
     <p><%= key.capitalize.gsub("_", " ") %>: <%= value %></p>
   <% end %>
 <% end %>
-</div>
+
 
 <% if @user == current_user %>
   <%= link_to "Edit Profile", edit_user_path(@user) %>
 <% end %>
-
+</div>
+</td>
+<td>
 <div class="content">
+<h3>  <%= @user.firstname %> 
+<%= @user.lastname %>'s posts </h3>
 <% @user.posts.each do |post| %>
   <%= render post %>
 <% end %>
 </div>
+</td>
+<body>

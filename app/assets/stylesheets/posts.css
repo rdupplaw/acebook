@@ -2,38 +2,60 @@ body {
   background-color: rgb(240, 231, 231);
   margin: 20px;
   padding: 20px;
-  font-family: Didot, sans-serif;
+  font-family: 'Futura';
   font-size: 17px;
-}
-
-.container {
-  background-color: rgb(252, 248, 248);
-  border: 2px solid rgb(223, 184, 177);
 }
 
 .title {
   text-align: center;
+  font-family: 'Futura';
 }
 
-.post {
-  padding: 10px;
-  margin: 5px;
-  border: 2px solid rgb(223, 184, 177);
-  text-align: center;
+.container {
+  background-color: rgb(252, 248, 248);
+  border: 2px solid rgb(203, 172, 172);
 }
 
 .content {
   padding: 10px;
   margin: 5px;
-  border: 1px solid rgb(223, 184, 177);
+  border: 2px solid rgb(203, 172, 172);
   text-align: center;
 }
 
+.table {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid rgb(203, 172, 172);
+  text-align: left;
+}
+
+.post {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid rgb(203, 172, 172);
+  text-align: center;
+  float: right;
+  width: 90%;
+}
+
+.underpost {
+  padding: 10px;
+  margin: 5px;
+  text-align: left;
+  float: right;
+  width: 90%;
+  font-size: 15px;
+}
+
+.poster-info {
+  font-size: 15px;
+  text-align: left;
+}
 
 /* Add a background color to the top navigation */
 .topnav {
-  background-color: rgb(223, 184, 177);
-
+  background-color: rgb(203, 172, 172);
   overflow: hidden;
 }
 
@@ -49,14 +71,21 @@ body {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgb(221, 201, 201);
+  color: rgb(144, 90, 90);
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: darkgrey;
   color: white;
+}
+
+.navprofile {
+  margin-right:50px;
+  float: right;
+  text-align: right;
+  vertical-align: middle;
 }
 
 .commentpost {
@@ -85,8 +114,8 @@ body {
 }
 
 .post-image {
-  height: 60%;
-  width: 60%;
+  height: 70%;
+  width: 70%;
 }
   
 .newpost {

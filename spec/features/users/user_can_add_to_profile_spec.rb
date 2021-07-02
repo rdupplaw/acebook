@@ -8,7 +8,7 @@ RSpec.describe 'Profile page', type: :feature do
   end
 
   it 'allows user to add additional information' do
-    click_link "My Profile"
+    click_link "John Doe"
     click_link "Edit Profile"
 
     fill_in "Bio", with: "This is my bio"
@@ -28,7 +28,7 @@ RSpec.describe 'Profile page', type: :feature do
   end
 
   it 'allows user to edit profile' do
-    click_link "My Profile"
+    click_link "John Doe"
     click_link "Edit Profile"
 
     fill_in "Bio", with: "This is my bio"
@@ -43,7 +43,7 @@ RSpec.describe 'Profile page', type: :feature do
   end
 
   it 'only displays the label if the information is present' do
-    click_link "My Profile"
+    click_link "John Doe"
     click_link "Edit Profile"
 
     fill_in "Bio", with: "This is my bio"
@@ -58,7 +58,7 @@ RSpec.describe 'Profile page', type: :feature do
   end
 
   it 'can only be edited by the owner of the profile' do
-    click_link "My Profile"
+    click_link "John Doe"
     click_link "Edit Profile"
 
     fill_in "Bio", with: "This is my bio"
