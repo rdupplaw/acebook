@@ -25,7 +25,7 @@ RSpec.feature 'Friend requests' do
     fill_in 'session[email]', with: 'john@example.com'
     fill_in 'session[password]', with: 'test123'
     click_button 'Log in'
-    click_link 'My Profile'
+    click_link 'John Doe'
     click_link 'Pending Friend Requests'
     click_link 'Accept'
     expect(page).to have_content 'You are now friends with James Doe'
