@@ -6,6 +6,9 @@
 <div class="commentpost">
 <p> <%= image_tag profile_picture_for(User.find(@post.user_id)), class: "profile-pic" %> <%= "#{User.find(@post.user_id).firstname} #{User.find(@post.user_id).lastname}" %>'s Post </p>
 <h2><%= @post.message %></h2>
+<% if @post.image.attached? %>
+  <%= image_tag @post.image, class:"post-image" %>
+<% end %>
 </div>
 
 <div class="comment">
