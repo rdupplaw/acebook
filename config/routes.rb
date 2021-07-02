@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users do 
     resources :invitations
+    get '/friends', to: 'users#friends'
   end
 
 
