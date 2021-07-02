@@ -6,7 +6,7 @@ RSpec.describe 'Post profile link', type: :feature do
     click_link 'New post'
     fill_in 'Message', with: 'Hello, world!'
     click_button 'Submit'
-    click_link 'John Doe'
+    first('.topnav').click_link('John Doe')
 
     expect(current_path).to eq('/users/1')
   end
