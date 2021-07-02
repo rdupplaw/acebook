@@ -4,7 +4,7 @@
 <% end %>
 
 <% if Invitation.incoming_request?(current_user) && @user.id == current_user.id %>
-  <%= link_to "Accept Friend Request", user_invitation_path(@user), method: :patch %>
+  <%= link_to "Pending Friend Requests", user_invitations_url(@user), method: :get %>
 <% end %>
 
 <div class="content">
@@ -13,8 +13,3 @@
   <% end %>
 </div>
 
-<% if Invitation.incoming_request?(current_user) && @user.id == current_user.id %>
-  <% @invitations.each do |invitation| %>
-    <%= "#{invitation.friend.firstname} #{invitation.friend.lastname}: " %> <%= link_to "Accept", user_invitation_path(invitation.friend_id), method: :patch %> 
-  <% end %>
-<% end %>

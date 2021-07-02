@@ -1,4 +1,9 @@
 class InvitationsController < ApplicationController
+  def index
+    @user = User.find(params[:user_id])
+    @invitations = Invitation.where(user_id: @user.id)
+  end
+
   def create 
     @user = User.find(params[:user_id])
     @user.send_invitation(current_user)
@@ -8,7 +13,7 @@ class InvitationsController < ApplicationController
   def update 
     @user = User.find(params[:user_id])
     @friend = User.find(params[:id])
-    @friend.accept_invitation(@user)
-    redirect_to user_path(@user), notice: "You are now friends with #{@user.firstname} #{@user.lastname}"
+    @user.accept_invitation(@friend)
+    redirect_to user_invitations_path, notice: "You are now friends with #{@friend.firstname} #{@friend.lastname}"
   end
 end
