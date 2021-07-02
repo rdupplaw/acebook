@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @invitations = Invitation.where(user_id: @user.id)
+    @friend = Invitation.where(user_id: @user.id).pluck(:friend_id)
   end
 
   def new

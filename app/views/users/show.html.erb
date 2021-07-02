@@ -1,8 +1,11 @@
-<!DOCTYPE html>
-<head>
-<title>Your AceBook Profile </title>
-</head>
-<body>
+<% unless @user.friend_with?(current_user) || @user.id == current_user.id || Invitation.pending_request?(@user, current_user) %>
+  <%= link_to "Add Friend", user_invitations_path(@user), method: :post %>
+<% end %>
+
+<% if Invitation.incoming_request?(current_user) && @user.id == current_user.id %>
+  <%= link_to "Pending Friend Requests", user_invitations_url(@user), method: :get %>
+<% end %>
+
 <h1 class="title"> <%= @user.firstname %> <%= @user.lastname %>'s Profile </h1>
 <table class="table">
 <tr>
@@ -25,6 +28,9 @@
   <% unless value.empty? %>
     <p><%= key.capitalize.gsub("_", " ") %>: <%= value %></p>
   <% end %>
+
+</div>
+
 <% end %>
 
 
