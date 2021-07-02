@@ -6,6 +6,8 @@
   <%= link_to "Pending Friend Requests", user_invitations_url(@user), method: :get %>
 <% end %>
 
+<%= link_to "Friends List", user_friends_path(@user), method: :get %>
+
 <h1 class="title"> <%= @user.firstname %> <%= @user.lastname %>'s Profile </h1>
 <table class="table">
 <tr>

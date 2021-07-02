@@ -1,4 +1,5 @@
 <div class="content">
+  <h2>Friend Requests</h2>
   <% @invitations.each do |invitation| %>
     <% if Invitation.incoming_request?(@user.id) && @user.id == current_user.id && invitation.confirmed == false %>
       <%= "#{User.where(id: invitation.friend_id).first.firstname} #{User.where(id: invitation.friend_id).first.lastname}: " %> <%= link_to "Accept", user_invitation_path(user_id: @user, id: invitation.friend_id), method: :patch %> 

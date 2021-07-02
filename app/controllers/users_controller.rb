@@ -37,6 +37,11 @@ class UsersController < ApplicationController
     @user.update_attribute(:relationship_status, params[:user][:relationship_status])
     redirect_to @user
   end
+  
+  def friends 
+    @user = User.find(params[:user_id])
+    @invitations = Invitation.where(user_id: @user.id, confirmed: true).or(Invitation.where(friend_id: @user.id, confirmed: true))
+  end
 
   private
 
