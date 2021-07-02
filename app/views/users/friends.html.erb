@@ -1,7 +1,7 @@
 <div class="content">
   <h2>Friends List</h2>
   <% @invitations.each do |friend| %>
-    <% if friend.id == #{User.where(id: friend.friend_id).first.id %>
+    <% if @user.id == friend.friend_id %>
       <%= link_to "#{User.where(id: friend.user_id).first.firstname} #{User.where(id: friend.user_id).first.lastname}", user_path(friend.user_id), method: :get %> 
     <% else %>
       <%= link_to "#{User.where(id: friend.friend_id).first.firstname} #{User.where(id: friend.friend_id).first.lastname}", user_path(friend.friend_id), method: :get %> 
