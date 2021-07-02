@@ -1,4 +1,3 @@
-<%= render @user %>
 <% unless @user.friend_with?(current_user) || @user.id == current_user.id || Invitation.pending_request?(@user, current_user) %>
   <%= link_to "Add Friend", user_invitations_path(@user), method: :post %>
 <% end %>
@@ -7,9 +6,46 @@
   <%= link_to "Pending Friend Requests", user_invitations_url(@user), method: :get %>
 <% end %>
 
-<div class="content">
-  <% @user.posts.each do |post| %>
-    <%= render post %>
-  <% end %>
+<h1 class="title"> <%= @user.firstname %> <%= @user.lastname %>'s Profile </h1>
+<table class="table">
+<tr>
+<td VALIGN=TOP>
+<div class=“sign_up”>
+  <p>
+  <%= image_tag profile_picture_for(@user), class: "user-pic" %>
+  </p>
+  <p>
+  <%= @user.firstname %>
+  <%= @user.lastname %>
+  </p>
+  <p>
+  <%= @user.email %>
+  </p>
 </div>
 
+<div>
+<% @user.profile.each do |key, value| %>
+  <% unless value.empty? %>
+    <p><%= key.capitalize.gsub("_", " ") %>: <%= value %></p>
+  <% end %>
+
+</div>
+
+<% end %>
+
+
+<% if @user == current_user %>
+  <%= link_to "Edit Profile", edit_user_path(@user) %>
+<% end %>
+</div>
+</td>
+<td>
+<div class="content">
+<h3>  <%= @user.firstname %> 
+<%= @user.lastname %>'s posts </h3>
+<% @user.posts.each do |post| %>
+  <%= render post %>
+<% end %>
+</div>
+</td>
+<body>

@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_one_attached :profile_picture
   has_many :posts
   has_many :likes, dependent: :destroy
+
   has_many :invitations 
   has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "friend_id"
 
@@ -28,4 +29,6 @@ class User < ApplicationRecord
     request = Invitation.where(user_id: id, friend_id: user.id, confirmed: false).first
     request.update_column(:confirmed, true)
   end
+  
+  store :profile, accessors: [:bio, :age, :home_town, :education, :workplace, :relationship_status], coder: JSON
 end

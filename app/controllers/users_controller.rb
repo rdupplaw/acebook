@@ -23,6 +23,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update_attribute(:bio, params[:user][:bio])
+    @user.update_attribute(:age, params[:user][:age])
+    @user.update_attribute(:home_town, params[:user][:home_town])
+    @user.update_attribute(:education, params[:user][:education])
+    @user.update_attribute(:workplace, params[:user][:workplace])
+    @user.update_attribute(:relationship_status, params[:user][:relationship_status])
+    redirect_to @user
+  end
+
   private
 
   def user_params

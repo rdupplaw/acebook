@@ -3,11 +3,18 @@
   <div class="topnav">
     <nav>
       <ul>
-        <a><%= link_to "Posts", posts_path %></a>
-        <a><%= link_to "My Profile", @user %></a>
-        <a><%= link_to "Log Out", logout_path, method: :delete %></a>
         <% if logged_in? %>
-          <%= image_tag profile_picture_for(current_user), class: "profile-pic" %>
+          <%= link_to "Posts", posts_path %>
+          <div class="navprofile">
+            <a>
+              <%= image_tag profile_picture_for(current_user), class: "profile-pic" %>
+              <%= link_to  "#{current_user.firstname} #{current_user.lastname}", current_user %>
+            </a>
+            <%= link_to "Log Out", logout_path, method: :delete %>
+          </div>
+        <% else %>
+          <%= link_to 'Sign up', new_user_path %>
+          <%= link_to 'Log in', login_path %>
         <% end %>
       </ul>
     </nav>

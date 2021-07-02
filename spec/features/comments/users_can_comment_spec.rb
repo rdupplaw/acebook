@@ -16,7 +16,6 @@ RSpec.describe 'Comments', type: :feature do
     
     fill_in "comment[body]", with: "goodbye"
     click_button "Create Comment"
-    expect(page).to have_content("1 comment")
-    expect(current_path).to eq('/posts')
+    expect(page).to have_content("goodbye")
   end
 end

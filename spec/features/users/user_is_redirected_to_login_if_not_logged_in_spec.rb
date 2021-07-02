@@ -20,4 +20,12 @@ RSpec.describe 'Redirect to login', type: :feature do
 
     expect(page).to have_current_path('/users/new')
   end
+
+  it 'redirects to posts if user is logged in' do
+    register
+
+    visit '/'
+
+    expect(current_path).to eq('/posts')
+  end
 end

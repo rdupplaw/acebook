@@ -1,32 +1,35 @@
-<table class="content">
-  <tbody>
+<table class="table">
     <tr>
-      <%= image_tag profile_picture_for(post.user), class: "profile-pic" %>
-      <%= link_to "#{post.user.firstname} #{post.user.lastname}", post.user %>
-      <% if post.user == current_user %>
-          <%= link_to "Delete", post, method: :delete, class: "delete-post-btn" %>
-      <% end %>
+      <td width="15%" VALIGN=TOP>
+          <p><%= image_tag profile_picture_for(post.user), class: "profile-pic" %>
+          <%= link_to "#{post.user.firstname} #{post.user.lastname}", post.user %></p>
+          <p class= "poster-info"><%= time_ago_in_words(post.created_at) %> ago</p>
+          <% if post.user == current_user %>
+            <p class= "poster-info"><%= link_to "Delete", post, method: :delete %></p>
+          <% end %>
+      </td>
+      <td>
+        <div class="post"><%= post.message %>
+        <% if post.image.attached? %>
+          <%= image_tag post.image, class:"post-image" %>
+        <% end %>
+        </div>
+      </td>
     </tr>
     <tr>
-    <p><div class="post"><%= post.message %></div></p>
+      <td width="15%"></td>
+      <td>
+        <div class="underpost">
+        <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+          <% if pre_like %>
+            <%= link_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+          <% else %>
+            <%= link_to 'Like', post_likes_path(post), method: :post %>
+          <% end %> - 
+          <%= link_to pluralize(post.likes.count, 'like'), post_likes_path(post) %> - 
+          <%= pluralize(post.comments.count, 'comment') %> - 
+          <%= link_to "View", post_path(post) %></p>
+        </div>
+      </td>
     </tr>
-    <tr>
-      <% if post.image.attached? %>
-        <%= image_tag post.image %>
-      <% end %>
-    </tr>
-    <tr>
-      <td><% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
-        <% if pre_like %>
-          <%= link_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
-        <% else %>
-          <%= link_to 'Like', post_likes_path(post), method: :post %>
-        <% end %></td>
-      <td><%= link_to "View", post_path(post) %><br></td>
-    </tr>
-    <tr>
-      <td><p><%= link_to pluralize(post.likes.count, 'like'), post_likes_path(post) %></p></td>
-      <td><p><%= pluralize(post.comments.count, 'comment') %></p></td>
-    </tr>
-  </tbody>
 </table>
